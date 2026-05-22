@@ -88,8 +88,8 @@ pipeline {
         stage('Run Application Using Docker Compose') {
             steps {
                 sh '''
-                docker compose down || true
-                docker compose up -d
+                docker-compose down || true
+                docker-compose up -d
                 '''
             }
         }
